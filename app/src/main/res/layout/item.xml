@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:layout_margin="10dp"
+    android:padding="10dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".item"
+    android:backgroundTint="#0172A6"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/imgFp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:paddingRight="10dp"
+            android:src="@drawable/ic_fingerprint" />
+
+        <TextView
+            android:id="@+id/tvWaktuRiwayatPemakaian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imgFp"
+            android:text="Waktu:"
+            android:textColor="#FFFAC3"
+            android:textStyle="bold"
+            android:paddingBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/tvWaktuRiwayatPemakaianVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_toRightOf="@+id/tvWaktuRiwayatPemakaian"
+            android:text="Null"
+            android:textColor="#FFFAC3" />
+        <TextView
+            android:id="@+id/tvStatusRiwayatPemakaian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status:"
+            android:textStyle="bold"
+            android:textColor="#FFFAC3"
+            android:layout_toRightOf="@+id/imgFp"
+            android:layout_below="@+id/tvWaktuRiwayatPemakaian"
+            />
+
+        <TextView
+            android:id="@+id/tvStatusRiwayatPemakaianVal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Null"
+            android:textColor="#FFFAC3"
+            android:layout_marginStart="5dp"
+            android:layout_toRightOf="@+id/tvStatusRiwayatPemakaian"
+            android:layout_below="@+id/tvWaktuRiwayatPemakaian"
+            />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

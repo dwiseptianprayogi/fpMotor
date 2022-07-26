@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp"
+    tools:context=".ui.home.HomeFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rvStatusKeamanan"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:backgroundTint="#FFFAC3"
+        app:cardBackgroundColor="@color/black"
+        app:cardCornerRadius="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status Keamanan Kendaraan:"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+            />
+            <TextView
+                android:id="@+id/tvStatusKeamananVal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No Data Received"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnUpdateFingerPrint"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Update Fingerprint"
+        android:textColor="#FFFAC3"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg_btn_login"
+        android:backgroundTint="#0172A6"
+        app:layout_constraintTop_toBottomOf="@+id/rvStatusKeamanan"
+        />
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tvRiwayatPemakaian"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_margin="40dp"
+        app:cardCornerRadius="10dp"
+        android:backgroundTint="#606060"
+        app:layout_constraintBottom_toTopOf="@id/framlayout"
+        app:layout_constraintTop_toTopOf="@+id/framlayout"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RIWAYAT PPEMAKAIAN MOTOR"
+            android:textStyle="bold"
+            android:textColor="#FFFAC3"
+            android:backgroundTint="#606060"
+            android:layout_gravity="center"
+            />
+    </androidx.cardview.widget.CardView>
+    <FrameLayout
+        android:id="@+id/framlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpdateFingerPrint"
+        >
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFAC3"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/FpList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/text_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

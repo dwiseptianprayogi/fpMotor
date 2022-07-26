@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="@color/white"
+    tools:context=".ui.gallery.GalleryFragment">
+
+    <TextView
+        android:id="@+id/tvHistoryFp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="HISTORY SENSOR FINGERPRINT"
+        android:textColor="#0172A6"
+        android:textStyle="bold"
+        android:gravity="center"
+        />
+
+    <TableLayout
+        android:id="@+id/tlHistoryFp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/tvHistoryFp"
+        >
+        <TableRow
+            android:background="#0172A6"
+            android:padding="10dp"
+            app:layout_constraintTop_toTopOf="parent"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Waktu"
+                android:textColor="#FFFAC3"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Status"
+                android:textColor="#FFFAC3"
+                android:textStyle="bold"
+                />
+        </TableRow>
+    </TableLayout>
+
+    <FrameLayout
+        android:id="@+id/framlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tlHistoryFp"
+        >
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFFAC3"
+            >
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/FpListHistory"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_history_fp"
+                android:layout_marginTop="1dp"
+                />
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
